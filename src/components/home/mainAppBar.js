@@ -23,14 +23,14 @@ export default function LandingPage() {
 
   return (
     <div>
-      <AppBar position="static" style={{ background: '#2E2D25' }}>
+      <AppBar position="static" style={{ background: '#000000' }}>
         <Toolbar>
           <Typography variant="h5" className={classes.title}>
             <NavLink
               to="/"
               style={{ color: "white", textDecoration: "inherit", fontSize: 33 }}
             >
-              morris<b>O</b>
+              m<b><span style={{color: "#2CC1D2"}}>|</span>O</b>
             </NavLink>
           </Typography>
 

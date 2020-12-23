@@ -1,0 +1,51 @@
+.socialMedia {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+
+}
+
+.socMed {
+  cursor: pointer;
+}
+  
+hr {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+.particles-box {
+  position: absolute; 
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+}
+
+.LogoInHeader {
+  justify-content: space-between;
+  width: 30px;
+  height: 30px;
+  align-items: center;
+  margin: 45px;
+  cursor: pointer;
+}
+
+.container-box {
+  width: 80%;
+  background-color: transparent;
+  z-index: 9;
+}
+
+#body {
+  background-color: rgb(251, 252, 253);
+}
+/**Dark Mode */
+#body2 {
+  background-color: rgb(58, 65, 75);
+  color: rgb(230, 234, 240);
+}

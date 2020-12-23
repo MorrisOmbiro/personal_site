@@ -10,9 +10,9 @@ import "../static/content.css";
 import githubLogo from "../images/github.png";
 import linkedInLogo from "../images/linkedin.png";
 import twitterIcon from "../images/twitter.png";
-import About from "../about/about.js"
+import About from "../about/about.js";
 import Skills from "../skills/skills.js";
-import LandingImage from "./landing-image.js"
+import LandingImage from "./landing-image.js";
 import Particles from "react-particles-js";
 import { particles } from "../../particles.js";
 import Fade from "react-reveal/Fade";
@@ -28,7 +28,7 @@ const Welcome = styled.h1`
     font-size: 1.25em;
   }
   div {
-    color: ${props => '#D4B830'};
+    color: ${(props) => "#D4B830"};
     text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.4);
     font-weight: 100;
     letter-spacing: 7px;
@@ -42,14 +42,13 @@ const Welcome = styled.h1`
   }
 `;
 
-const img1 = 'https://images.unsplash.com/photo-1588345921523-c2dcdb7f1dcd?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80';
-
+const img1 =
+  "https://images.unsplash.com/photo-1588345921523-c2dcdb7f1dcd?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80";
 
 function ContentPage() {
-
   const NiceAbout = () => {
     return (
-      <div>
+      <div id="about">
         <Parallax
           blur={{ min: -30, max: 30 }}
           bgImage={img1}
@@ -65,8 +64,8 @@ function ContentPage() {
           </div>
         </Parallax>
       </div>
-    )
-  }
+    );
+  };
 
   const SocialMediaLinks = () => {
     return (
@@ -104,7 +103,7 @@ function ContentPage() {
         </Row>
       </div>
     );
-  }
+  };
 
   const TitleMessage = () => {
     return (
@@ -114,7 +113,7 @@ function ContentPage() {
             <div className="heading">
               <div className="main text-center mb-3">
                 Hi, I am
-          <br />
+                <br />
                 <span>
                   <strong>Morris Ombiro</strong>
                 </span>
@@ -122,10 +121,14 @@ function ContentPage() {
               <div className="sub">
                 <Typewriter
                   options={{
-                    strings: ["Software Engineer", "Volunteer Tutor", "Tech. Enthusiast"],
+                    strings: [
+                      "Software Engineer",
+                      "Volunteer Tutor",
+                      "Tech. Enthusiast",
+                    ],
                     autoStart: true,
                     loop: true,
-                    delay: 50
+                    delay: 50,
                   }}
                 />
               </div>
@@ -133,37 +136,40 @@ function ContentPage() {
           </div>
         </Welcome>
       </div>
-    )
-  }
+    );
+  };
+
+  const Languages = () => {
+    return (
+      <div id="languages">
+        <Container maxWidth="md" style={{ position: "relative" }}>
+          <Paper elevation={5}>
+            <figure>
+              <embed src="https://wakatime.com/share/@adeef282-e3e3-4ba9-8b4b-307ffbf53e6a/1f8b7cea-5b8d-4b7c-8169-89d97247eb3a.svg"></embed>
+            </figure>
+          </Paper>
+        </Container>
+      </div>
+    );
+  };
 
   return (
     <React.Fragment>
       <div className="App" style={{ position: "relative" }}>
         <LandingImage />
         <TitleMessage />
-        <Particles
-          className="particles particles-box"
-          params={particles}
-        />
+        <Particles className="particles particles-box" params={particles} />
         <Divider />
         <NiceAbout />
-          <Divider />
-          <Skills />
-          <Divider />
-          <Container maxWidth="md" style={{position: "relative"}}>
-            <Paper elevation={5} >
-              <figure>
-                <embed src="https://wakatime.com/share/@adeef282-e3e3-4ba9-8b4b-307ffbf53e6a/1f8b7cea-5b8d-4b7c-8169-89d97247eb3a.svg"></embed>
-              </figure>
-            </Paper>
-          </Container>
-          <Divider />
-          <SocialMediaLinks />
-        
+        <Divider />
+        <Skills />
+        <Divider />
+        <Languages />
+        <Divider />
+        <SocialMediaLinks />
       </div>
     </React.Fragment>
   );
 }
 
 export default ContentPage;
-

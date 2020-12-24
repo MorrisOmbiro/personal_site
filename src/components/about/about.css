@@ -6,6 +6,8 @@
   
   .profile {
     max-width: auto;
+    align-items: flex-start;
+    -webkit-align-items: flex-start;
   }
   
   .my-details {

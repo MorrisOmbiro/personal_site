@@ -5,7 +5,7 @@
   }
   
   .profile {
-    max-width: auto;
+    max-width: 18em;
     align-items: flex-start;
     -webkit-align-items: flex-start;
   }

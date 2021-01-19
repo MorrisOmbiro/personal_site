@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/personal_site/static/css/main.1cde5dbd.chunk.css",
-    "main.js": "/personal_site/static/js/main.d2a103b0.chunk.js",
-    "main.js.map": "/personal_site/static/js/main.d2a103b0.chunk.js.map",
+    "main.css": "/personal_site/static/css/main.067b359f.chunk.css",
+    "main.js": "/personal_site/static/js/main.a9b661b2.chunk.js",
+    "main.js.map": "/personal_site/static/js/main.a9b661b2.chunk.js.map",
     "runtime-main.js": "/personal_site/static/js/runtime-main.1964ab22.js",
     "runtime-main.js.map": "/personal_site/static/js/runtime-main.1964ab22.js.map",
     "static/js/2.1f34e91d.chunk.js": "/personal_site/static/js/2.1f34e91d.chunk.js",
     "static/js/2.1f34e91d.chunk.js.map": "/personal_site/static/js/2.1f34e91d.chunk.js.map",
     "index.html": "/personal_site/index.html",
-    "static/css/main.1cde5dbd.chunk.css.map": "/personal_site/static/css/main.1cde5dbd.chunk.css.map",
+    "static/css/main.067b359f.chunk.css.map": "/personal_site/static/css/main.067b359f.chunk.css.map",
     "static/js/2.1f34e91d.chunk.js.LICENSE.txt": "/personal_site/static/js/2.1f34e91d.chunk.js.LICENSE.txt",
     "static/media/C++_Logo.2441702d.svg": "/personal_site/static/media/C++_Logo.2441702d.svg",
     "static/media/bootstrap-4.997c463d.svg": "/personal_site/static/media/bootstrap-4.997c463d.svg",
@@ -37,7 +37,7 @@
     "static/media/react.add74742.svg": "/personal_site/static/media/react.add74742.svg",
     "static/media/redux.0e4fb1c8.svg": "/personal_site/static/media/redux.0e4fb1c8.svg",
     "static/media/resume.150ca4b3.png": "/personal_site/static/media/resume.150ca4b3.png",
-    "static/media/slide1.14619b04.webp": "/personal_site/static/media/slide1.14619b04.webp",
+    "static/media/slide.c18818f3.jpg": "/personal_site/static/media/slide.c18818f3.jpg",
     "static/media/styled-components.a5fa325c.svg": "/personal_site/static/media/styled-components.a5fa325c.svg",
     "static/media/twitter.67ad063d.png": "/personal_site/static/media/twitter.67ad063d.png",
     "static/media/typescript.a6305a73.svg": "/personal_site/static/media/typescript.a6305a73.svg"
@@ -45,7 +45,7 @@
   "entrypoints": [
     "static/js/runtime-main.1964ab22.js",
     "static/js/2.1f34e91d.chunk.js",
-    "static/css/main.1cde5dbd.chunk.css",
-    "static/js/main.d2a103b0.chunk.js"
+    "static/css/main.067b359f.chunk.css",
+    "static/js/main.a9b661b2.chunk.js"
   ]
 }

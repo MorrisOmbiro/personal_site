@@ -54,7 +54,7 @@ export default function LandingPage() {
             duration={500}
             style={{
               textDecoration: "inherit",
-              color: "#D4B830",
+              color: "#D3DF90",
               fontSize: "1.3em",
               marginRight: 15,
             }}
@@ -70,7 +70,7 @@ export default function LandingPage() {
             duration={500}
             style={{
               textDecoration: "inherit",
-              color: "#D4B830",
+              color: "#D3DF90",
               fontSize: "1.3em",
               marginRight: 15,
             }}
@@ -86,7 +86,7 @@ export default function LandingPage() {
             duration={500}
             style={{
               textDecoration: "inherit",
-              color: "#D4B830",
+              color: "#D3DF90",
               fontSize: "1.3em",
               marginRight: 15,
             }}

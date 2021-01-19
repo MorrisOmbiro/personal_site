@@ -28,7 +28,7 @@ const Welcome = styled.h1`
     font-size: 1.25em;
   }
   div {
-    color: ${(props) => "#D4B830"};
+    color: ${(props) => "#D3DF90"};
     text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.4);
     font-weight: 100;
     letter-spacing: 7px;

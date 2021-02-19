@@ -19,6 +19,22 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+const navLinks = {
+  textDecoration: "inherit",
+  fontFamily: "inherit",
+  color: "#000",
+  fontSize: "1em",
+  marginRight: 45,
+  fontWeight: "bold",
+  '&:hover': {
+    cursor: 'pointer', 
+  }
+};
+
+const logo = {
+  marginLeft: 50, 
+}
+
 export default function LandingPage() {
   const classes = useStyles();
 
@@ -26,17 +42,17 @@ export default function LandingPage() {
     <div>
       <AppBar
         clasName="animate-appbar"
-        position="static"
-        style={{ background: "#000000" }}
+        position="fixed"
+        style={{ background: "#D7D7D9" }}
       >
         <Toolbar>
-          <Typography variant="h5" className={classes.title}>
+          <Typography variant="h5" className={classes.title} style={logo}> 
             <NavLink
               to="/"
               style={{
                 color: "white",
                 textDecoration: "inherit",
-                fontSize: 33,
+                fontSize: 38,
               }}
             >
               m
@@ -52,14 +68,9 @@ export default function LandingPage() {
             smooth={true}
             offset={-70}
             duration={500}
-            style={{
-              textDecoration: "inherit",
-              color: "#D3DF90",
-              fontSize: "1.3em",
-              marginRight: 15,
-            }}
+            style={navLinks}
           >
-            About
+            ABOUT
           </Link>
           <Link
             activeClass="active"
@@ -68,14 +79,9 @@ export default function LandingPage() {
             smooth={true}
             offset={-70}
             duration={500}
-            style={{
-              textDecoration: "inherit",
-              color: "#D3DF90",
-              fontSize: "1.3em",
-              marginRight: 15,
-            }}
+            style={navLinks}
           >
-            Skills
+            SKILLS
           </Link>
           <Link
             activeClass="active"
@@ -84,14 +90,9 @@ export default function LandingPage() {
             smooth={true}
             offset={-70}
             duration={500}
-            style={{
-              textDecoration: "inherit",
-              color: "#D3DF90",
-              fontSize: "1.3em",
-              marginRight: 15,
-            }}
+            style={navLinks}
           >
-            Languages
+            LANGUAGES
           </Link>
         </Toolbar>
       </AppBar>

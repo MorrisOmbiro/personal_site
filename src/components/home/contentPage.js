@@ -28,7 +28,7 @@ const Welcome = styled.h1`
     font-size: 1.25em;
   }
   div {
-    color: ${(props) => "#D3DF90"};
+    color: ${(props) => "#000"};
     text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.4);
     font-weight: 100;
     letter-spacing: 7px;
@@ -43,7 +43,7 @@ const Welcome = styled.h1`
 `;
 
 const img1 =
-  "https://images.unsplash.com/photo-1588345921523-c2dcdb7f1dcd?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80";
+  "https://images.unsplash.com/photo-1580264747222-2420fd32ce68?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=676&q=80";
 
 function ContentPage() {
   const NiceAbout = () => {
@@ -112,10 +112,10 @@ function ContentPage() {
           <div className="titleMessage">
             <div className="heading">
               <div className="main text-center mb-3">
-                Hi, I am
+                Hi, <span style={{color: "#6AC9D5"}}>I</span> am
                 <br />
                 <span>
-                  <strong>Morris Ombiro</strong>
+                  <strong>Morris <span style={{color: "red"}}>O</span>mbiro</strong>
                 </span>
               </div>
               <div className="sub">
@@ -143,6 +143,7 @@ function ContentPage() {
     return (
       <div id="languages">
         <Container maxWidth="md" style={{ position: "relative" }}>
+        <h3 style={{color: "#232323", textAlign: "center"}}>Langua<span style={{color: "red"}}>g</span>es</h3>
           <Paper elevation={5}>
             <figure>
               <embed src="https://wakatime.com/share/@adeef282-e3e3-4ba9-8b4b-307ffbf53e6a/1f8b7cea-5b8d-4b7c-8169-89d97247eb3a.svg"></embed>

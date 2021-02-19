@@ -9,11 +9,18 @@ import githubLogo from "../images/github.png";
 import resumeLogo from "../images/resume.png";
 import linkedInLogo from "../images/linkedin.png";
 
+const mainAbout = {
+    marginTop: 0, 
+}
+
+
+
 const About = () => {
     return (
-        <div id="about" >
+        <div id="about" style={mainAbout}>
             <div className="about">
-                <h1 className="pt-3 text-center font-details pb-3">ABOUT</h1>
+                <h3 style={{color: "#232323", textAlign: "center"}}>About M<span style={{color: "red"}}>e</span></h3>
+                
                 <Container fluid="md">
                     <Row className="align-items-center">
                         <Col>
@@ -22,8 +29,8 @@ const About = () => {
                             </Row>
                         </Col>
                         <Col xs={12} md={6}>
-                            <Row className="align-items-start p-2 my-details rounded">
-                                Hi there! I am <strong>&nbsp;Morris Ombiro</strong>
+                            <Row className="align-items-start p-2 my-details rounded" style={{color: "#50A4AB", fontFamily: "monospace", fontWeight: "normal"}}>
+                                Hi there! I am <strong style={{fontWeight: "bold"}}>&nbsp;Morris Ombiro</strong>
                                 <br />Born and raised in Kenya until my transfer to Minneapolis, MN for studies.
                                 In May 2020 I graduate from the University of Minnesota with a degree in Computer Engineering.
                                 I mainly focused on Operating Systems, Electronics, and Algorithms and Data structures. <br />

@@ -13,7 +13,7 @@ import "./skills.css";
 const Skills = () => {
   return (
     <div className="pt-3 pb-3" id="skills">
-      <h1 className="pt-1 text-center font-details pb-1">SKILLS</h1>
+      <h3 style={{color: "#232323", textAlign: "center"}}>Sk<span style={{color: "red"}}>i</span>lls</h3>
       <CardDeck>
         <Row className="d-flex justify-content-around">
           {/* Frontend */}

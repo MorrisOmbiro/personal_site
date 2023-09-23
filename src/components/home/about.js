@@ -14,14 +14,12 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-
 export default function About() {
   const classes = useStyles();
 
   return (
     <div>
       <MainAppBar />
-
       <Container maxWidth="md" className={classes.root} align="center">
         <Paper elevation={5}>
           <Divider />

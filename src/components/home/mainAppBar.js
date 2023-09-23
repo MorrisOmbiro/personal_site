@@ -25,15 +25,13 @@ const navLinks = {
   color: "#000",
   fontSize: "1em",
   marginRight: 45,
-  fontWeight: "bold",
-  '&:hover': {
-    cursor: 'pointer', 
-  }
+  // fontWeight: "bold",
+  cursor: "pointer",
 };
 
 const logo = {
-  marginLeft: 50, 
-}
+  marginLeft: 50,
+};
 
 export default function LandingPage() {
   const classes = useStyles();
@@ -46,7 +44,7 @@ export default function LandingPage() {
         style={{ background: "#D7D7D9" }}
       >
         <Toolbar>
-          <Typography variant="h5" className={classes.title} style={logo}> 
+          <Typography variant="h5" className={classes.title} style={logo}>
             <NavLink
               to="/"
               style={{

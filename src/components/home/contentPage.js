@@ -112,10 +112,12 @@ function ContentPage() {
           <div className="titleMessage">
             <div className="heading">
               <div className="main text-center mb-3">
-                Hi, <span style={{color: "#6AC9D5"}}>I</span> am
+                Hi, <span style={{ color: "#6AC9D5" }}>I</span> am
                 <br />
                 <span>
-                  <strong>Morris <span style={{color: "red"}}>O</span>mbiro</strong>
+                  <strong>
+                    Morris <span style={{ color: "red" }}>O</span>mbiro
+                  </strong>
                 </span>
               </div>
               <div className="sub">
@@ -143,7 +145,9 @@ function ContentPage() {
     return (
       <div id="languages">
         <Container maxWidth="md" style={{ position: "relative" }}>
-        <h3 style={{color: "#232323", textAlign: "center"}}>Langua<span style={{color: "red"}}>g</span>es</h3>
+          <h3 style={{ color: "#232323", textAlign: "center" }}>
+            Langua<span style={{ color: "red" }}>g</span>es
+          </h3>
           <Paper elevation={5}>
             <figure>
               <embed src="https://wakatime.com/share/@adeef282-e3e3-4ba9-8b4b-307ffbf53e6a/1f8b7cea-5b8d-4b7c-8169-89d97247eb3a.svg"></embed>
@@ -158,8 +162,8 @@ function ContentPage() {
     <React.Fragment>
       <div className="App" style={{ position: "relative" }}>
         <LandingImage />
-        <TitleMessage />
         <Particles className="particles particles-box" params={particles} />
+        <TitleMessage />
         <Divider />
         <NiceAbout />
         <Divider />

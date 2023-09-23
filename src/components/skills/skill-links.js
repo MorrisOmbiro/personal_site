@@ -13,8 +13,6 @@ import L_EXPRESS from "../images/skills/express.svg";
 import L_DJANGO from "../images/skills/django.svg";
 import L_FLASK from "../images/skills/flask.svg";
 import L_MONGODB from "../images/skills/mongodb.svg";
-import L_POSTGRESQL from "../images/skills/postgresql.svg";
-import L_MSSQL from "../images/skills/mssql.svg";
 import L_GIT from "../images/skills/git-icon.svg";
 import L_HEROKU from "../images/skills/heroku.svg";
 import L_GITHUB_PAGES from "../images/skills/github.svg";
@@ -22,7 +20,7 @@ import L_JAVASCRIPT from "../images/skills/javascript.svg";
 import L_TYPESCRIPT from "../images/skills/typescript.svg";
 import L_JAVA from "../images/skills/java-vertical.svg";
 import L_PYTHON from "../images/skills/python.svg";
-import C_plus_plus from "../images/skills/C++_Logo.svg"
+import C_plus_plus from "../images/skills/C++_Logo.svg";
 
 export const skills = {
   frontend: [
@@ -86,7 +84,6 @@ export const skills = {
       imgSrc: L_STYLED_COMPONENTS,
       skillName: "styled-components",
     },
-
   ],
 
   backend: [
@@ -135,7 +132,8 @@ export const skills = {
       imgAltText: "Java",
       imgSrc: L_JAVA,
       skillName: "Java",
-    }, {
+    },
+    {
       link: "https://www.cplusplus.com/",
       imgAltText: "C++",
       imgSrc: C_plus_plus,
@@ -159,7 +157,6 @@ export const skills = {
       imgSrc: L_PYTHON,
       skillName: "Python",
     },
-    
   ],
   databases: [
     {

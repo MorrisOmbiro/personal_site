@@ -13,7 +13,7 @@ const mainAbout = {
   marginTop: 0,
 };
 
-const About = () => {
+const About: React.FC = () => {
   return (
     <div id="about" style={mainAbout}>
       <div className="about">

@@ -1,10 +1,10 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { AppBar, Button } from "@material-ui/core";
+import { AppBar } from "@material-ui/core";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import { NavLink } from "react-router-dom";
-import { Link, animateScroll as scroll } from "react-scroll";
+import { Link } from "react-scroll";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -33,13 +33,13 @@ const logo = {
   marginLeft: 50,
 };
 
-export default function LandingPage() {
+const MainAppBar: React.FC = () => {
   const classes = useStyles();
 
   return (
     <div>
       <AppBar
-        clasName="animate-appbar"
+        className="animate-appbar"
         position="fixed"
         style={{ background: "#D7D7D9" }}
       >
@@ -96,4 +96,6 @@ export default function LandingPage() {
       </AppBar>
     </div>
   );
-}
+};
+
+export default MainAppBar;

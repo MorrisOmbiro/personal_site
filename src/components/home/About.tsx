@@ -1,9 +1,9 @@
 import React from "react";
-import MainAppBar from "./mainAppBar";
+import MainAppBar from "./MainAppBar";
 import { Container, Divider, Paper, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 
-import Footer from "./footer";
+import Footer from "./Footer";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -14,13 +14,13 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function About() {
+const About: React.FC = () => {
   const classes = useStyles();
 
   return (
     <div>
       <MainAppBar />
-      <Container maxWidth="md" className={classes.root} align="center">
+      <Container maxWidth="md" className={classes.root}>
         <Paper elevation={5}>
           <Divider />
           <Typography
@@ -87,4 +87,6 @@ export default function About() {
       <Footer />
     </div>
   );
-}
+};
+
+export default About;

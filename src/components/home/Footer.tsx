@@ -8,13 +8,19 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Footer() {
+const Footer: React.FC = () => {
   const classes = useStyles();
   return (
-    <Typography className ={classes.root} variant="body2" color="textSecondary" align="center">
-      {"© "}
-      {new Date().getFullYear()}
+    <Typography
+      className={classes.root}
+      variant="body2"
+      color="textSecondary"
+      align="center"
+    >
+      "© "{new Date().getFullYear()}
       {"."} {"Syntax Light, Algorithm Tight"}
     </Typography>
   );
-}
+};
+
+export default Footer;

@@ -2,7 +2,7 @@ import React from "react";
 import Row from "react-bootstrap/Row";
 import { Col } from "react-bootstrap";
 import { Container, Divider, Paper } from "@material-ui/core";
-import Typewriter from "typewriter-effect";
+import Typewriter, { TypewriterClass } from "typewriter-effect";
 import styled from "styled-components";
 import { Parallax } from "react-parallax";
 import Image from "react-bootstrap/Image";
@@ -10,12 +10,9 @@ import "../static/content.css";
 import githubLogo from "../images/github.png";
 import linkedInLogo from "../images/linkedin.png";
 import twitterIcon from "../images/twitter.png";
-import About from "../about/about.js";
-import Skills from "../skills/skills.js";
-import LandingImage from "./landing-image.js";
-import Particles from "react-particles-js";
-import { particles } from "../../particles.js";
-import Fade from "react-reveal/Fade";
+import About from "../About";
+import Skills from "../Skills";
+import LandingImage from "./LandingImage";
 
 const Welcome = styled.h1`
   width: 100%;
@@ -45,7 +42,7 @@ const Welcome = styled.h1`
 const img1 =
   "https://images.unsplash.com/photo-1580264747222-2420fd32ce68?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=676&q=80";
 
-function ContentPage() {
+const ContentPage: React.FC = () => {
   const NiceAbout = () => {
     return (
       <div id="about">
@@ -57,9 +54,7 @@ function ContentPage() {
         >
           <div>
             <Container className="container-box rounded">
-              <Fade duration={1000}>
-                <About />
-              </Fade>
+              <About />
             </Container>
           </div>
         </Parallax>
@@ -132,6 +127,9 @@ function ContentPage() {
                     loop: true,
                     delay: 50,
                   }}
+                  onInit={function (typewriter: TypewriterClass): void {
+                    console.log("");
+                  }}
                 />
               </div>
             </div>
@@ -159,10 +157,9 @@ function ContentPage() {
   };
 
   return (
-    <React.Fragment>
+    <>
       <div className="App" style={{ position: "relative" }}>
         <LandingImage />
-        <Particles className="particles particles-box" params={particles} />
         <TitleMessage />
         <Divider />
         <NiceAbout />
@@ -173,8 +170,8 @@ function ContentPage() {
         <Divider />
         <SocialMediaLinks />
       </div>
-    </React.Fragment>
+    </>
   );
-}
+};
 
 export default ContentPage;

@@ -1,177 +1,169 @@
 import React from "react";
-import Row from "react-bootstrap/Row";
-import { Col } from "react-bootstrap";
-import { Container, Divider, Paper } from "@material-ui/core";
-import Typewriter, { TypewriterClass } from "typewriter-effect";
-import styled from "styled-components";
-import { Parallax } from "react-parallax";
-import Image from "react-bootstrap/Image";
+import { Button, Divider, Grid, Typography, styled } from "@mui/material";
 import "../static/content.css";
 import githubLogo from "../images/github.png";
 import linkedInLogo from "../images/linkedin.png";
-import twitterIcon from "../images/twitter.png";
-import About from "../About";
-import Skills from "../Skills";
-import LandingImage from "./LandingImage";
-
-const Welcome = styled.h1`
-  width: 100%;
-  top: 22rem;
-  position: absolute;
-  z-index: 1;
-  text-align: center;
-  margin-top: -125px;
-  strong {
-    font-size: 1.25em;
-  }
-  div {
-    color: ${(props) => "#000"};
-    text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.4);
-    font-weight: 100;
-    letter-spacing: 7px;
-    .main {
-      font-size: 50px;
-    }
-    .sub {
-      font-size: 27px;
-      letter-spacing: 2px;
-    }
-  }
-`;
-
-const img1 =
-  "https://images.unsplash.com/photo-1580264747222-2420fd32ce68?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=676&q=80";
+import resumeLogo from "../images/business-doc.png";
+import skillsLogo from "../images/skills.png";
 
 const ContentPage: React.FC = () => {
-  const NiceAbout = () => {
-    return (
-      <div id="about">
-        <Parallax
-          blur={{ min: -30, max: 30 }}
-          bgImage={img1}
-          bgImageAlt=""
-          strength={-700}
-        >
-          <div>
-            <Container className="container-box rounded">
-              <About />
-            </Container>
-          </div>
-        </Parallax>
-      </div>
-    );
-  };
-
-  const SocialMediaLinks = () => {
-    return (
-      <div className="socialMedia">
-        <Row>
-          <Col xs="auto">
-            <Image
-              id="git_logo"
-              src={githubLogo}
-              className="LogoInHeader"
-              onClick={(e) =>
-                window.open("https://github.com/MorrisOmbiro", "_blank")
-              }
-            />
-            <Image
-              id="linkedin_logo"
-              src={linkedInLogo}
-              className="LogoInHeader"
-              onClick={(e) =>
-                window.open(
-                  "https://www.linkedin.com/in/morris-ombiro-a72973100/",
-                  "_blank"
-                )
-              }
-            />
-            <Image
-              id="Twitter_Icon"
-              src={twitterIcon}
-              className="LogoInHeader"
-              onClick={(e) =>
-                window.open("https://twitter.com/Morris67549925", "_blank")
-              }
-            />
-          </Col>
-        </Row>
-      </div>
-    );
-  };
-
-  const TitleMessage = () => {
-    return (
-      <div>
-        <Welcome>
-          <div className="titleMessage">
-            <div className="heading">
-              <div className="main text-center mb-3">
-                Hi, <span style={{ color: "#6AC9D5" }}>I</span> am
-                <br />
-                <span>
-                  <strong>
-                    Morris <span style={{ color: "red" }}>O</span>mbiro
-                  </strong>
-                </span>
-              </div>
-              <div className="sub">
-                <Typewriter
-                  options={{
-                    strings: [
-                      "Software Engineer",
-                      "Volunteer Tutor",
-                      "Tech. Enthusiast",
-                    ],
-                    autoStart: true,
-                    loop: true,
-                    delay: 50,
-                  }}
-                  onInit={function (typewriter: TypewriterClass): void {
-                    console.log("");
-                  }}
-                />
-              </div>
-            </div>
-          </div>
-        </Welcome>
-      </div>
-    );
-  };
-
-  const Languages = () => {
-    return (
-      <div id="languages">
-        <Container maxWidth="md" style={{ position: "relative" }}>
-          <h3 style={{ color: "#232323", textAlign: "center" }}>
-            Langua<span style={{ color: "red" }}>g</span>es
-          </h3>
-          <Paper elevation={5}>
-            <figure>
-              <embed src="https://wakatime.com/share/@adeef282-e3e3-4ba9-8b4b-307ffbf53e6a/1f8b7cea-5b8d-4b7c-8169-89d97247eb3a.svg"></embed>
-            </figure>
-          </Paper>
-        </Container>
-      </div>
-    );
-  };
+  const paramsList = [
+    {
+      id: "git_logo",
+      src: githubLogo,
+      className: "LogoInHeader",
+      desc: "GitHub is my coding playground, where you can explore my \
+      projects and contributions. Check out my repositories to see my \
+      open-source work and coding adventures.",
+      onClick: () => window.open("https://github.com/MorrisOmbiro", "_blank"),
+    },
+    {
+      id: "linkedin_logo",
+      src: linkedInLogo,
+      className: "LogoInHeader",
+      desc: "On LinkedIn, you'll find my professional journey, network \
+      , and achievements. Let's connect to share insights and explore \
+      new opportunities together.",
+      onClick: () =>
+        window.open(
+          "https://www.linkedin.com/in/morris-ombiro-a72973100/",
+          "_blank"
+        ),
+    },
+    {
+      id: "Resume_Icon",
+      src: resumeLogo,
+      className: "LogoInHeader",
+      desc: "My resume highlights my skills, experiences, and \
+       qualifications. It's a snapshot of my professional \
+        background and what I bring to the table.",
+      onClick: () =>
+        window.open(
+          "https://drive.google.com/file/d/1SHkrA4buk4Mqz0f_Xd0_M8PwwSN6-k6J/view?usp=sharing",
+          "_blank"
+        ),
+    },
+    {
+      id: "Skills_Icon",
+      src: skillsLogo,
+      className: "LogoInHeader",
+      desc: "I have experience in a variety of programming languages \
+      and frameworks, including React, React Native, Typescript, \
+      Javascript ES6, REST API, GraphQL, and Java.",
+      onClick: () =>
+        window.open(
+          "\
+      https://drive.google.com/file/d/1SHkrA4buk4Mqz0f_Xd0_M8PwwSN6-k6J/view?usp=sharing",
+          "_blank"
+        ),
+    },
+  ];
 
   return (
-    <>
-      <div className="App" style={{ position: "relative" }}>
-        <LandingImage />
-        <TitleMessage />
-        <Divider />
-        <NiceAbout />
-        <Divider />
-        <Skills />
-        <Divider />
-        <Languages />
-        <Divider />
-        <SocialMediaLinks />
-      </div>
-    </>
+    <SocialMedia>
+      <Grid container spacing={4}>
+        {paramsList.map((param) => (
+          <Grid key={param.id} item xs={6}>
+            <InfoCard size="large" variant="outlined">
+              <Grid container>
+                <Grid item xs={12}>
+                  <Grid container direction="column" spacing={1}>
+                    <Grid item>
+                      <img
+                        src={param.src}
+                        className={param.className}
+                        onClick={param.onClick}
+                      />
+                    </Grid>
+                    <Grid item>
+                      <Divider light style={{ height: "0px" }} />
+                    </Grid>
+                    <Grid item>
+                      <Typography
+                        variant="body2"
+                        align="left"
+                        paragraph
+                        color="gray"
+                      >
+                        {param.desc ?? "oh"}
+                      </Typography>
+                    </Grid>
+                  </Grid>
+                </Grid>
+              </Grid>
+            </InfoCard>
+          </Grid>
+        ))}
+      </Grid>
+    </SocialMedia>
   );
 };
+
+const SocialMedia = styled("div")(({ theme }) => ({
+  position: "relative",
+  top: "16%",
+  zIndex: 15,
+  textAlign: "center",
+  paddingBottom: theme.spacing(2),
+}));
+
+const InfoCard = styled(Button)(({ theme }) => ({
+  display: "flex",
+  height: "100%",
+  width: "100%",
+  textTransform: "none",
+  padding: theme.spacing(2, 2, 3, 2),
+  textAlign: "center",
+  "&:hover": {
+    backgroundColor: theme.palette.primary.contrastText,
+    borderColor: theme.palette.primary.dark,
+    animation: "borderAnimation 3s infinite linear",
+  },
+  "&:focus": {
+    backgroundColor: theme.palette.primary.contrastText,
+  },
+  "&:active": {
+    backgroundColor: theme.palette.primary.contrastText,
+    animation: "borderAnimation2 3s infinite linear",
+  },
+  "@keyframes borderAnimation": {
+    "0%": {
+      borderColor: "blue",
+    },
+    "25%": {
+      borderColor: "yellow",
+    },
+    "50%": {
+      borderColor: "red",
+    },
+    "75%": {
+      borderColor: "white",
+    },
+    "100%": {
+      borderColor: "blue",
+    },
+  },
+  "@keyframes borderAnimation2": {
+    "0%": {
+      borderColor: "orange",
+    },
+    "25%": {
+      borderColor: "purple",
+    },
+    "50%": {
+      borderColor: "cyan",
+    },
+    "75%": {
+      borderColor: "black",
+    },
+    "100%": {
+      borderColor: "orange",
+    },
+  },
+  "& > *": {
+    height: "100%",
+    alignItems: "flex-start",
+  },
+}));
 
 export default ContentPage;

@@ -79,7 +79,12 @@ const ContentPage: React.FC = () => (
     <Grid container spacing={4}>
       {cardList.map((param) => (
         <Grid key={param.id} item xs={6}>
-          <InfoButton size="large" variant="outlined">
+          <InfoButton
+            size="large"
+            variant="outlined"
+            onClick={param.onClick}
+            disableFocusRipple
+          >
             <Grid container>
               <Grid item xs={12}>
                 <Grid
@@ -96,7 +101,7 @@ const ContentPage: React.FC = () => (
                     />
                   </Grid>
                   <DescGrid item>
-                    <Divider light style={{ height: "0px" }} />
+                    <Divider style={{ height: "0px" }} />
                   </DescGrid>
                   <DescGrid item>{param.desc}</DescGrid>
                 </Grid>
@@ -141,33 +146,36 @@ const InfoButton = styled(Button)(({ theme }) => ({
   textTransform: "none",
   padding: theme.spacing(2, 2, 3, 2),
   textAlign: "center",
+  borderWidth: "2px",
   "&:hover": {
-    backgroundColor: theme.palette.primary.contrastText,
-    borderColor: theme.palette.primary.dark,
     animation: "borderAnimation 3s infinite linear",
+    borderWidth: "2px",
   },
   "&:focus": {
-    backgroundColor: theme.palette.primary.contrastText,
+    backgroundColor: theme.palette.error.light,
+    borderWidth: "2px",
+    "& h6": {
+      color: "white",
+    },
   },
   "&:active": {
-    backgroundColor: theme.palette.primary.contrastText,
-    animation: "borderAnimation2 3s infinite linear",
+    borderWidth: "2px",
   },
   "@keyframes borderAnimation": {
     "0%": {
-      borderColor: "blue",
+      borderColor: theme.palette.error.light,
     },
     "25%": {
-      borderColor: "yellow",
+      borderColor: theme.palette.warning.light,
     },
     "50%": {
-      borderColor: "red",
+      borderColor: theme.palette.success.light,
     },
     "75%": {
-      borderColor: "white",
+      borderColor: theme.palette.info.light,
     },
     "100%": {
-      borderColor: "blue",
+      borderColor: theme.palette.secondary.light,
     },
   },
   "@keyframes borderAnimation2": {
@@ -178,13 +186,13 @@ const InfoButton = styled(Button)(({ theme }) => ({
       borderColor: "purple",
     },
     "50%": {
-      borderColor: "cyan",
-    },
-    "75%": {
       borderColor: "black",
     },
-    "100%": {
+    "75%": {
       borderColor: "orange",
+    },
+    "100%": {
+      borderColor: "maroon",
     },
   },
   "& > *": {

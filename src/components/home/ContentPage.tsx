@@ -5,24 +5,33 @@ import githubLogo from "../images/github.png";
 import linkedInLogo from "../images/linkedin.png";
 import resumeLogo from "../images/business-doc.png";
 import skillsLogo from "../images/skills.png";
+import DescTypography from "./DescTypography";
 
 const cardList = [
   {
     id: "git_logo",
     src: githubLogo,
     className: "LogoInHeader",
-    desc: "GitHub is my coding playground, where you can explore my \
-    projects and contributions. Check out my repositories to see my \
-    open-source work and coding adventures.",
+    desc: (
+      <DescTypography>
+        GitHub is my coding playground, where you can explore my projects and
+        contributions. Check out my repositories to see my open-source work and
+        coding adventures.
+      </DescTypography>
+    ),
     onClick: () => window.open("https://github.com/MorrisOmbiro", "_blank"),
   },
   {
     id: "linkedin_logo",
     src: linkedInLogo,
     className: "LogoInHeader",
-    desc: "On LinkedIn, you'll find my professional journey, network \
-    , and achievements. Let's connect to share insights and explore \
-    new opportunities together.",
+    desc: (
+      <DescTypography>
+        On LinkedIn, you'll find my professional journey, network , and
+        achievements. Let's connect to share insights and explore new
+        opportunities together.
+      </DescTypography>
+    ),
     onClick: () =>
       window.open(
         "https://www.linkedin.com/in/morris-ombiro-a72973100/",
@@ -33,9 +42,12 @@ const cardList = [
     id: "Resume_Icon",
     src: resumeLogo,
     className: "LogoInHeader",
-    desc: "My resume highlights my skills, experiences, and \
-     qualifications. It's a snapshot of my professional \
-      background and what I bring to the table.",
+    desc: (
+      <DescTypography>
+        My resume highlights my skills, experiences, and qualifications. It's a
+        snapshot of my professional background and what I bring to the table."
+      </DescTypography>
+    ),
     onClick: () =>
       window.open(
         "https://drive.google.com/file/d/1SHkrA4buk4Mqz0f_Xd0_M8PwwSN6-k6J/view?usp=sharing",
@@ -46,9 +58,13 @@ const cardList = [
     id: "Skills_Icon",
     src: skillsLogo,
     className: "LogoInHeader",
-    desc: "I have experience in a variety of programming languages \
-    and frameworks, including React, React Native, Typescript, \
-    Javascript ES6, REST API, GraphQL, and Java.",
+    desc: (
+      <DescTypography>
+        I have experience in a variety of programming languages and frameworks,
+        including React, React Native, Typescript, Javascript ES6, REST API,
+        GraphQL, and Java."
+      </DescTypography>
+    ),
     onClick: () =>
       window.open(
         "\
@@ -82,16 +98,7 @@ const ContentPage: React.FC = () => (
                   <DescGrid item>
                     <Divider light style={{ height: "0px" }} />
                   </DescGrid>
-                  <DescGrid item>
-                    <Typography
-                      variant="body2"
-                      align="left"
-                      paragraph
-                      color="gray"
-                    >
-                      {param.desc}
-                    </Typography>
-                  </DescGrid>
+                  <DescGrid item>{param.desc}</DescGrid>
                 </Grid>
               </Grid>
             </Grid>

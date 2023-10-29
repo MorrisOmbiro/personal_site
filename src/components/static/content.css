@@ -10,7 +10,7 @@
 .socMed {
   cursor: pointer;
 }
-  
+
 hr {
   border: 0;
   height: 1px;
@@ -18,7 +18,7 @@ hr {
 }
 
 .particles-box {
-  position: absolute; 
+  position: absolute;
   top: 0;
   left: 0;
   height: 100%;
@@ -32,7 +32,6 @@ hr {
   height: 30px;
   align-items: center;
   margin: 45px;
-  cursor: pointer;
 }
 
 .container-box {

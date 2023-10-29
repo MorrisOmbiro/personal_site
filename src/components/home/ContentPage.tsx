@@ -6,108 +6,128 @@ import linkedInLogo from "../images/linkedin.png";
 import resumeLogo from "../images/business-doc.png";
 import skillsLogo from "../images/skills.png";
 
-const ContentPage: React.FC = () => {
-  const paramsList = [
-    {
-      id: "git_logo",
-      src: githubLogo,
-      className: "LogoInHeader",
-      desc: "GitHub is my coding playground, where you can explore my \
-      projects and contributions. Check out my repositories to see my \
-      open-source work and coding adventures.",
-      onClick: () => window.open("https://github.com/MorrisOmbiro", "_blank"),
-    },
-    {
-      id: "linkedin_logo",
-      src: linkedInLogo,
-      className: "LogoInHeader",
-      desc: "On LinkedIn, you'll find my professional journey, network \
-      , and achievements. Let's connect to share insights and explore \
-      new opportunities together.",
-      onClick: () =>
-        window.open(
-          "https://www.linkedin.com/in/morris-ombiro-a72973100/",
-          "_blank"
-        ),
-    },
-    {
-      id: "Resume_Icon",
-      src: resumeLogo,
-      className: "LogoInHeader",
-      desc: "My resume highlights my skills, experiences, and \
-       qualifications. It's a snapshot of my professional \
-        background and what I bring to the table.",
-      onClick: () =>
-        window.open(
-          "https://drive.google.com/file/d/1SHkrA4buk4Mqz0f_Xd0_M8PwwSN6-k6J/view?usp=sharing",
-          "_blank"
-        ),
-    },
-    {
-      id: "Skills_Icon",
-      src: skillsLogo,
-      className: "LogoInHeader",
-      desc: "I have experience in a variety of programming languages \
-      and frameworks, including React, React Native, Typescript, \
-      Javascript ES6, REST API, GraphQL, and Java.",
-      onClick: () =>
-        window.open(
-          "\
-      https://drive.google.com/file/d/1SHkrA4buk4Mqz0f_Xd0_M8PwwSN6-k6J/view?usp=sharing",
-          "_blank"
-        ),
-    },
-  ];
+const cardList = [
+  {
+    id: "git_logo",
+    src: githubLogo,
+    className: "LogoInHeader",
+    desc: "GitHub is my coding playground, where you can explore my \
+    projects and contributions. Check out my repositories to see my \
+    open-source work and coding adventures.",
+    onClick: () => window.open("https://github.com/MorrisOmbiro", "_blank"),
+  },
+  {
+    id: "linkedin_logo",
+    src: linkedInLogo,
+    className: "LogoInHeader",
+    desc: "On LinkedIn, you'll find my professional journey, network \
+    , and achievements. Let's connect to share insights and explore \
+    new opportunities together.",
+    onClick: () =>
+      window.open(
+        "https://www.linkedin.com/in/morris-ombiro-a72973100/",
+        "_blank"
+      ),
+  },
+  {
+    id: "Resume_Icon",
+    src: resumeLogo,
+    className: "LogoInHeader",
+    desc: "My resume highlights my skills, experiences, and \
+     qualifications. It's a snapshot of my professional \
+      background and what I bring to the table.",
+    onClick: () =>
+      window.open(
+        "https://drive.google.com/file/d/1SHkrA4buk4Mqz0f_Xd0_M8PwwSN6-k6J/view?usp=sharing",
+        "_blank"
+      ),
+  },
+  {
+    id: "Skills_Icon",
+    src: skillsLogo,
+    className: "LogoInHeader",
+    desc: "I have experience in a variety of programming languages \
+    and frameworks, including React, React Native, Typescript, \
+    Javascript ES6, REST API, GraphQL, and Java.",
+    onClick: () =>
+      window.open(
+        "\
+    https://drive.google.com/file/d/1SHkrA4buk4Mqz0f_Xd0_M8PwwSN6-k6J/view?usp=sharing",
+        "_blank"
+      ),
+  },
+];
 
-  return (
-    <SocialMedia>
-      <Grid container spacing={4}>
-        {paramsList.map((param) => (
-          <Grid key={param.id} item xs={6}>
-            <InfoCard size="large" variant="outlined">
-              <Grid container>
-                <Grid item xs={12}>
-                  <Grid container direction="column" spacing={1}>
-                    <Grid item>
-                      <img
-                        src={param.src}
-                        className={param.className}
-                        onClick={param.onClick}
-                      />
-                    </Grid>
-                    <Grid item>
-                      <Divider light style={{ height: "0px" }} />
-                    </Grid>
-                    <Grid item>
-                      <Typography
-                        variant="body2"
-                        align="left"
-                        paragraph
-                        color="gray"
-                      >
-                        {param.desc ?? "oh"}
-                      </Typography>
-                    </Grid>
+const ContentPage: React.FC = () => (
+  <SocialMedia>
+    <Grid container spacing={4}>
+      {cardList.map((param) => (
+        <Grid key={param.id} item xs={6}>
+          <InfoButton size="large" variant="outlined">
+            <Grid container>
+              <Grid item xs={12}>
+                <Grid
+                  container
+                  direction="column"
+                  spacing={1}
+                  alignContent="center"
+                >
+                  <Grid item>
+                    <Logo
+                      src={param.src}
+                      // className={param.className}
+                      onClick={param.onClick}
+                    />
                   </Grid>
+                  <DescGrid item>
+                    <Divider light style={{ height: "0px" }} />
+                  </DescGrid>
+                  <DescGrid item>
+                    <Typography
+                      variant="body2"
+                      align="left"
+                      paragraph
+                      color="gray"
+                    >
+                      {param.desc}
+                    </Typography>
+                  </DescGrid>
                 </Grid>
               </Grid>
-            </InfoCard>
-          </Grid>
-        ))}
-      </Grid>
-    </SocialMedia>
-  );
-};
+            </Grid>
+          </InfoButton>
+        </Grid>
+      ))}
+    </Grid>
+  </SocialMedia>
+);
 
+const Logo = styled("img")({
+  justifyContent: "space-between",
+  width: "45px",
+  height: "45px",
+  alignItems: "center",
+  margin: "45px",
+  "@media (max-width: 700px)": {
+    width: "60px",
+    height: "60px",
+  },
+});
 const SocialMedia = styled("div")(({ theme }) => ({
   position: "relative",
-  top: "16%",
+  top: "12%",
   zIndex: 15,
   textAlign: "center",
   paddingBottom: theme.spacing(2),
 }));
 
-const InfoCard = styled(Button)(({ theme }) => ({
+const DescGrid = styled(Grid)(({ theme }) => ({
+  "@media (max-width: 700px)": {
+    display: "none",
+  },
+}));
+
+const InfoButton = styled(Button)(({ theme }) => ({
   display: "flex",
   height: "100%",
   width: "100%",

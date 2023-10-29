@@ -20,7 +20,7 @@ const Header: React.FC = () => {
 
 const Title = styled("div")({
   position: "relative",
-  top: "8%",
+  top: "6%",
   zIndex: 15,
   textAlign: "center",
 });

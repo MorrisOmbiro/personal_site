@@ -17,7 +17,7 @@ const Label = styled("div")({
   position: "relative",
   zIndex: 15,
   textAlign: "center",
-  top: "18%",
+  top: "15%",
 });
 
 const StyledTypography = styled(Typography)({

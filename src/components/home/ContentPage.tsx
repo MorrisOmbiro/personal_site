@@ -6,6 +6,7 @@ import linkedInLogo from "../images/linkedin.png";
 import resumeLogo from "../images/business-doc.png";
 import skillsLogo from "../images/skills.png";
 import DescTypography from "./DescTypography";
+import SkillsCard from "./SkillsCard";
 
 const cardList = [
   {
@@ -19,7 +20,7 @@ const cardList = [
         coding adventures.
       </DescTypography>
     ),
-    onClick: () => window.open("https://github.com/MorrisOmbiro", "_blank"),
+    linkUrl: "https://github.com/MorrisOmbiro",
   },
   {
     id: "linkedin_logo",
@@ -32,11 +33,7 @@ const cardList = [
         opportunities together.
       </DescTypography>
     ),
-    onClick: () =>
-      window.open(
-        "https://www.linkedin.com/in/morris-ombiro-a72973100/",
-        "_blank"
-      ),
+    linkUrl: "https://www.linkedin.com/in/morris-ombiro-a72973100/",
   },
   {
     id: "Resume_Icon",
@@ -48,11 +45,8 @@ const cardList = [
         snapshot of my professional background and what I bring to the table."
       </DescTypography>
     ),
-    onClick: () =>
-      window.open(
-        "https://drive.google.com/file/d/1SHkrA4buk4Mqz0f_Xd0_M8PwwSN6-k6J/view?usp=sharing",
-        "_blank"
-      ),
+    linkUrl:
+      "https://drive.google.com/file/d/1SHkrA4buk4Mqz0f_Xd0_M8PwwSN6-k6J/view?usp=sharing",
   },
   {
     id: "Skills_Icon",
@@ -65,54 +59,74 @@ const cardList = [
         GraphQL, and Java."
       </DescTypography>
     ),
-    onClick: () =>
-      window.open(
-        "\
-    https://drive.google.com/file/d/1SHkrA4buk4Mqz0f_Xd0_M8PwwSN6-k6J/view?usp=sharing",
-        "_blank"
-      ),
   },
 ];
 
-const ContentPage: React.FC = () => (
-  <SocialMedia>
-    <Grid container spacing={4}>
-      {cardList.map((param) => (
-        <Grid key={param.id} item xs={6}>
-          <InfoButton
-            size="large"
-            variant="outlined"
-            onClick={param.onClick}
-            disableFocusRipple
-          >
-            <Grid container>
-              <Grid item xs={12}>
-                <Grid
-                  container
-                  direction="column"
-                  spacing={1}
-                  alignContent="center"
-                >
-                  <Grid item>
-                    <Logo
-                      src={param.src}
-                      // className={param.className}
-                      onClick={param.onClick}
-                    />
+const ContentPage: React.FC = () => {
+  const [cardStatus, setCardStatus] = React.useState<boolean>(false);
+  const handleCardClick =
+    (
+      url?: string,
+      cardStatus: boolean = false,
+      setCardStatus?: (status: boolean) => void
+    ) =>
+    () => {
+      if (url) {
+        window.open(url, "_blank");
+      } else {
+        setCardStatus?.(!cardStatus);
+      }
+    };
+
+  return (
+    <SocialMedia>
+      <Grid container spacing={4}>
+        {cardList.map((param) => (
+          <Grid key={param.id} item xs={6} lg={3}>
+            <InfoButton
+              size="large"
+              variant="outlined"
+              onClick={handleCardClick(
+                param.linkUrl,
+                cardStatus,
+                setCardStatus
+              )}
+              disableFocusRipple
+            >
+              <Grid container>
+                <Grid item>
+                  <Grid
+                    container
+                    direction="column"
+                    spacing={1}
+                    alignContent="center"
+                  >
+                    <Grid item>
+                      <Logo
+                        src={param.src}
+                        // className={param.className}
+                        onClick={handleCardClick(
+                          param.linkUrl,
+                          cardStatus,
+                          setCardStatus
+                        )}
+                      />
+                    </Grid>
+                    <DescGrid item>
+                      <Divider style={{ height: "0px" }} />
+                    </DescGrid>
+                    <DescGrid item>{param.desc}</DescGrid>
                   </Grid>
-                  <DescGrid item>
-                    <Divider style={{ height: "0px" }} />
-                  </DescGrid>
-                  <DescGrid item>{param.desc}</DescGrid>
                 </Grid>
               </Grid>
-            </Grid>
-          </InfoButton>
-        </Grid>
-      ))}
-    </Grid>
-  </SocialMedia>
-);
+            </InfoButton>
+          </Grid>
+        ))}
+      </Grid>
+      <SkillsCard open={cardStatus} setOpen={setCardStatus} />
+    </SocialMedia>
+  );
+};
 
 const Logo = styled("img")({
   justifyContent: "space-between",
@@ -123,6 +137,7 @@ const Logo = styled("img")({
   "@media (max-width: 700px)": {
     width: "60px",
     height: "60px",
+    alignItems: "center",
   },
 });
 const SocialMedia = styled("div")(({ theme }) => ({
@@ -145,7 +160,7 @@ const InfoButton = styled(Button)(({ theme }) => ({
   width: "100%",
   textTransform: "none",
   padding: theme.spacing(2, 2, 3, 2),
-  textAlign: "center",
+  alignContent: "center",
   borderWidth: "2px",
   "&:hover": {
     animation: "borderAnimation 3s infinite linear",

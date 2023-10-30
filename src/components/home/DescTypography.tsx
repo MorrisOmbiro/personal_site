@@ -7,10 +7,10 @@ interface Props {
 
 const DescTypography: React.FC<Props> = ({ children }) => (
   <Typography
-    align="center"
+    align="left"
     color="gray"
     variant="subtitle1"
-    style={{ fontSize: "18px" }}
+    style={{ fontSize: "16px" }}
   >
     {children}
   </Typography>

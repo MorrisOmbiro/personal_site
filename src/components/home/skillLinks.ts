@@ -85,7 +85,6 @@ export const skills = {
       skillName: "styled-components",
     },
   ],
-
   backend: [
     {
       link: "https://nodejs.org/en/",

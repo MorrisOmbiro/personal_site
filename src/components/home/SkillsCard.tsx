@@ -9,7 +9,7 @@ import {
 } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
 import IconButton from "@mui/material/IconButton";
-import HorizontalNonLinearStepper from "./Stepper";
+import SkillsContent from "./SkillsContent";
 
 interface Props {
   open: boolean;
@@ -36,10 +36,10 @@ const SkillsCard: React.FC<Props> = ({ open = false, setOpen }) => (
       <CloseIcon />
     </IconButton>
     <Divider style={{ height: 0, marginBottom: "16px" }} />
-    <CardContent style={{ height: "420px", width: "100%" }}>
+    <CardContent style={{ height: "600px", width: "100%" }}>
       <Grid container spacing={2}>
         <Grid container>
-          <HorizontalNonLinearStepper />
+          <SkillsContent />
         </Grid>
       </Grid>
     </CardContent>

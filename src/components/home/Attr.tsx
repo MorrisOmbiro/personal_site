@@ -11,10 +11,10 @@ const Attr: React.FC<{ skill: any; children: React.ReactNode }> = ({
 );
 
 const A = styled("a")({
-  marginLeft: "60px",
-  marginBottom: "40px",
   maxWidth: "40px",
   userSelect: "none",
+  flex: 1,
+  margin: "0 10% 20px 10%",
   "&:hover": {
     transform: "scale(1.1)",
     transition: "transform 0.5s ease-in-out",

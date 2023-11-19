@@ -18,7 +18,7 @@ const icons = [
   <GitHubIcon />,
 ];
 
-export default function HorizontalNonLinearStepper() {
+const SkillsContent: React.FC = () => {
   const [activeStep, setActiveStep] = React.useState(0);
 
   const handleStep = (step: number) => () => {
@@ -52,9 +52,9 @@ export default function HorizontalNonLinearStepper() {
             <div
               style={{
                 display: "flex",
-                width: "100%",
-                flexWrap: "wrap",
                 alignItems: "center",
+                justifyContent: "flex-start",
+                flexWrap: "wrap",
               }}
             >
               {skills.frontend.map((skill) => (
@@ -64,9 +64,10 @@ export default function HorizontalNonLinearStepper() {
                     alt={skill.skillName}
                     height="40px"
                     width="40px"
+                    style={{ marginBottom: "4px" }}
                   />
                   <Typography variant="body2" color="GrayText">
-                    {skill.skillName.toLocaleLowerCase()}
+                    {skill.skillName}
                   </Typography>
                 </Attr>
               ))}
@@ -87,9 +88,10 @@ export default function HorizontalNonLinearStepper() {
                     alt={skill.skillName}
                     height="40px"
                     width="40px"
+                    style={{ marginBottom: "4px" }}
                   />
                   <Typography variant="body2" color="GrayText">
-                    {skill.skillName.toLocaleLowerCase()}
+                    {skill.skillName}
                   </Typography>
                 </Attr>
               ))}
@@ -110,9 +112,10 @@ export default function HorizontalNonLinearStepper() {
                     alt={skill.skillName}
                     height="40px"
                     width="40px"
+                    style={{ marginBottom: "4px" }}
                   />
                   <Typography variant="body2" color="GrayText">
-                    {skill.skillName.toLocaleLowerCase()}
+                    {skill.skillName}
                   </Typography>
                 </Attr>
               ))}
@@ -122,7 +125,7 @@ export default function HorizontalNonLinearStepper() {
       </div>
     </Box>
   );
-}
+};
 
 const ZestiestDivider = styled(Divider)(({ theme }) => ({
   width: "25%",
@@ -156,3 +159,5 @@ const ZestiestStepper = styled(StepButton)(({ theme }) => ({
     },
   },
 }));
+
+export default SkillsContent;

@@ -125,7 +125,7 @@ export const skills = {
       link: "https://styled-components.com/",
       imgAltText: "styled-components",
       imgSrc: L_STYLED_COMPONENTS,
-      skillName: "styled-components",
+      skillName: "Styled-Components",
     },
   ],
   backend: [
@@ -221,7 +221,7 @@ export const skills = {
       link: "https://git-scm.com/",
       imgAltText: "GIT",
       imgSrc: L_GIT,
-      skillName: "GIT",
+      skillName: "Git",
     },
   ],
 };

@@ -20,10 +20,65 @@ import L_JAVASCRIPT from "../images/skills/javascript.svg";
 import L_TYPESCRIPT from "../images/skills/typescript.svg";
 import L_JAVA from "../images/skills/java-vertical.svg";
 import L_PYTHON from "../images/skills/python.svg";
+import L_ANGULAR from "../images/skills/angular.svg";
 import C_plus_plus from "../images/skills/C++_Logo.svg";
+import L_GRAPHQL from "../images/skills/GraphQL_Logo.svg";
+import L_TAILWIND from "../images/skills/tailwind.svg";
+import L_NEXTJS from "../images/skills/nextjs.svg";
+import L_SPRING from "../images/skills/spring.svg";
+import L_C_SHARP from "../images/skills/c-sharp.svg";
+import L_ANDROID from "../images/skills/android.svg";
 
 export const skills = {
   frontend: [
+    {
+      link: "https://reactjs.org/",
+      imgAltText: "React JS",
+      imgSrc: L_REACT,
+      skillName: "React",
+    },
+    {
+      link: "https://nextjs.org/",
+      imgAltText: "Next.js",
+      imgSrc: L_NEXTJS,
+      skillName: "Next.js",
+    },
+    {
+      link: "https://angular.io/",
+      imgAltText: "Angular",
+      imgSrc: L_ANGULAR,
+      skillName: "Angular",
+    },
+    {
+      link: "https://flask.palletsprojects.com/",
+      imgAltText: "Flask",
+      imgSrc: L_FLASK,
+      skillName: "Flask",
+    },
+    {
+      link: "https://graphql.org/",
+      imgAltText: "GraphQL",
+      imgSrc: L_GRAPHQL,
+      skillName: "GraphQL",
+    },
+    {
+      link: "https://typescriptlang.org/",
+      imgAltText: "TypeScript",
+      imgSrc: L_TYPESCRIPT,
+      skillName: "TypeScript",
+    },
+    {
+      link: "https://www.javascript.com/",
+      imgAltText: "JavaScript",
+      imgSrc: L_JAVASCRIPT,
+      skillName: "JavaScript",
+    },
+    {
+      link: "https://tailwindcss.com/",
+      imgAltText: "Tailwind CSS",
+      imgSrc: L_TAILWIND,
+      skillName: "Tailwind CSS",
+    },
     {
       link: "https://en.wikipedia.org/wiki/HTML5",
       imgAltText: "HTML 5",
@@ -35,24 +90,6 @@ export const skills = {
       imgAltText: "CSS 3",
       imgSrc: L_CSS3,
       skillName: "CSS3",
-    },
-    {
-      link: "https://www.javascript.com/",
-      imgAltText: "JavaScript",
-      imgSrc: L_JAVASCRIPT,
-      skillName: "JavaScript",
-    },
-    {
-      link: "https://getbootstrap.com/",
-      imgAltText: "Bootstrap",
-      imgSrc: L_BOOTSTRAP,
-      skillName: "Bootstrap",
-    },
-    {
-      link: "https://reactjs.org/",
-      imgAltText: "React JS",
-      imgSrc: L_REACT,
-      skillName: "React JS",
     },
     {
       link: "https://redux.js.org/",
@@ -73,6 +110,12 @@ export const skills = {
       skillName: "Material-UI",
     },
     {
+      link: "https://getbootstrap.com/",
+      imgAltText: "Bootstrap",
+      imgSrc: L_BOOTSTRAP,
+      skillName: "Bootstrap",
+    },
+    {
       link: "https://react-bootstrap.github.io/",
       imgAltText: "React Bootstrap",
       imgSrc: L_REACT_BOOTSTRAP,
@@ -86,6 +129,30 @@ export const skills = {
     },
   ],
   backend: [
+    {
+      link: "https://spring.io/",
+      imgAltText: "Spring",
+      imgSrc: L_SPRING,
+      skillName: "Spring",
+    },
+    {
+      link: "https://developer.android.com/",
+      imgAltText: "Android",
+      imgSrc: L_ANDROID,
+      skillName: "Android",
+    },
+    {
+      link: "https://docs.oracle.com/en/java/",
+      imgAltText: "Java",
+      imgSrc: L_JAVA,
+      skillName: "Java",
+    },
+    {
+      link: "https://learn.microsoft.com/en-us/dotnet/csharp/tour-of-csharp/",
+      imgAltText: "C#",
+      imgSrc: L_C_SHARP,
+      skillName: "C#",
+    },
     {
       link: "https://nodejs.org/en/",
       imgAltText: "Node.js",
@@ -124,13 +191,11 @@ export const skills = {
       imgSrc: L_GITHUB_PAGES,
       skillName: "GitHub Pages",
     },
-  ],
-  programmingLanguages: [
     {
-      link: "https://docs.oracle.com/en/java/",
-      imgAltText: "Java",
-      imgSrc: L_JAVA,
-      skillName: "Java",
+      link: "https://www.python.org/",
+      imgAltText: "Python",
+      imgSrc: L_PYTHON,
+      skillName: "Python",
     },
     {
       link: "https://www.cplusplus.com/",
@@ -138,26 +203,6 @@ export const skills = {
       imgSrc: C_plus_plus,
       skillName: "C++",
     },
-    {
-      link: "https://www.javascript.com/",
-      imgAltText: "JavaScript",
-      imgSrc: L_JAVASCRIPT,
-      skillName: "JavaScript",
-    },
-    {
-      link: "https://www.typescriptlang.org/",
-      imgAltText: "TypeScript",
-      imgSrc: L_TYPESCRIPT,
-      skillName: "TypeScript",
-    },
-    {
-      link: "https://www.python.org/",
-      imgAltText: "Python",
-      imgSrc: L_PYTHON,
-      skillName: "Python",
-    },
-  ],
-  databases: [
     {
       link: "https://www.mysql.com/",
       imgAltText: "mySQL",

@@ -1,10 +1,7 @@
 import React from "react";
 import {
-  Card,
   CardContent,
   Typography,
-  CardActions,
-  Button,
   Dialog,
   DialogTitle,
   Grid,
@@ -12,7 +9,7 @@ import {
 } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
 import IconButton from "@mui/material/IconButton";
-import { skills } from "./skillLinks";
+import HorizontalNonLinearStepper from "./Stepper";
 
 interface Props {
   open: boolean;
@@ -20,7 +17,7 @@ interface Props {
 }
 
 const SkillsCard: React.FC<Props> = ({ open = false, setOpen }) => (
-  <Dialog open={open} onClose={() => setOpen(false)} maxWidth="sm" fullWidth>
+  <Dialog open={open} onClose={() => setOpen(false)} maxWidth="md" fullWidth>
     <DialogTitle sx={{ m: 0, p: 2 }} id="customized-dialog-title">
       <Typography variant="h6" color="GrayText">
         SKILLS
@@ -38,19 +35,12 @@ const SkillsCard: React.FC<Props> = ({ open = false, setOpen }) => (
     >
       <CloseIcon />
     </IconButton>
-    <Divider style={{ height: 0 }} />
-    <CardContent>
+    <Divider style={{ height: 0, marginBottom: "16px" }} />
+    <CardContent style={{ height: "420px", width: "100%" }}>
       <Grid container spacing={2}>
-        {skills.frontend.map((skill) => {
-          return (
-            <Grid item xs={3} lg={3}>
-              <Typography variant="body2" color="GrayText">
-                {skill.skillName.toLocaleUpperCase()}
-              </Typography>
-            </Grid>
-          );
-        })}
-        <Grid item xs={12}></Grid>
+        <Grid container>
+          <HorizontalNonLinearStepper />
+        </Grid>
       </Grid>
     </CardContent>
   </Dialog>

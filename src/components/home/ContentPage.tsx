@@ -1,6 +1,5 @@
 import React from "react";
 import { Button, Divider, Grid, Typography, styled } from "@mui/material";
-import "../static/content.css";
 import githubLogo from "../images/github.png";
 import linkedInLogo from "../images/linkedin.png";
 import resumeLogo from "../images/business-doc.png";

@@ -1,21 +1,25 @@
+import { styled } from "@mui/material";
 import React from "react";
 
 const Attr: React.FC<{ skill: any; children: React.ReactNode }> = ({
   skill,
   children,
 }) => (
-  <a
-    href={skill.link}
-    target="_blank"
-    rel="noreferrer"
-    style={{
-      marginLeft: "52px",
-      marginBottom: "40px",
-      maxWidth: "40px",
-    }}
-  >
+  <A href={skill.link} target="_blank" rel="noreferrer">
     {children}
-  </a>
+  </A>
 );
+
+const A = styled("a")({
+  marginLeft: "60px",
+  marginBottom: "40px",
+  maxWidth: "40px",
+  userSelect: "none",
+  "&:hover": {
+    transform: "scale(1.1)",
+    transition: "transform 0.5s ease-in-out",
+    textDecoration: "none",
+  },
+});
 
 export default Attr;

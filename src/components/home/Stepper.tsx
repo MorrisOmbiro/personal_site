@@ -35,6 +35,7 @@ export default function HorizontalNonLinearStepper() {
                 onClick={handleStep(index)}
                 sx={{ margin: 0 }}
                 icon={icons[index]}
+                autoFocus={label === "Frontend"}
               >
                 {label}
               </ZestiestStepper>

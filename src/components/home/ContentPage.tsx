@@ -45,7 +45,7 @@ const cardList = [
       </DescTypography>
     ),
     linkUrl:
-      "https://drive.google.com/file/d/1SHkrA4buk4Mqz0f_Xd0_M8PwwSN6-k6J/view?usp=sharing",
+      "https://drive.google.com/file/d/1WomHEJAp8qKww0mxNgEIzik_XrBfai0i/view?usp=sharing",
   },
   {
     id: "Skills_Icon",

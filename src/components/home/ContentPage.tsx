@@ -1,15 +1,16 @@
 import React from "react";
-import { Button, Divider, Grid, Typography, styled } from "@mui/material";
+import { Button, Divider, Grid, IconButton, styled } from "@mui/material";
 import githubLogo from "../images/github.png";
 import linkedInLogo from "../images/linkedin.png";
 import resumeLogo from "../images/business-doc.png";
 import skillsLogo from "../images/skills.png";
 import DescTypography from "./DescTypography";
 import SkillsCard from "./SkillsCard";
+import { OpenInNew } from "@mui/icons-material";
 
 const cardList = [
   {
-    id: "git_logo",
+    id: "github",
     src: githubLogo,
     className: "LogoInHeader",
     desc: (
@@ -22,7 +23,7 @@ const cardList = [
     linkUrl: "https://github.com/MorrisOmbiro",
   },
   {
-    id: "linkedin_logo",
+    id: "linkedin",
     src: linkedInLogo,
     className: "LogoInHeader",
     desc: (
@@ -35,7 +36,7 @@ const cardList = [
     linkUrl: "https://www.linkedin.com/in/morris-ombiro-a72973100/",
   },
   {
-    id: "Resume_Icon",
+    id: "resume",
     src: resumeLogo,
     className: "LogoInHeader",
     desc: (
@@ -48,7 +49,7 @@ const cardList = [
       "https://drive.google.com/file/d/1WomHEJAp8qKww0mxNgEIzik_XrBfai0i/view?usp=sharing",
   },
   {
-    id: "Skills_Icon",
+    id: "skills",
     src: skillsLogo,
     className: "LogoInHeader",
     desc: (
@@ -110,6 +111,16 @@ const ContentPage: React.FC = () => {
                           setCardStatus
                         )}
                       />
+                    </Grid>
+                    <Grid item>
+                      <IconButton
+                        onClick={handleCardClick()}
+                        sx={{ paddingBottom: 0 }}
+                      >
+                        {param.id !== "skills" && (
+                          <OpenInNew fontSize="small" color="primary" />
+                        )}
+                      </IconButton>
                     </Grid>
                     <DescGrid item>
                       <Divider style={{ height: "0px" }} />

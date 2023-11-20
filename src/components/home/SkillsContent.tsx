@@ -35,16 +35,13 @@ const SkillsContent: React.FC = () => {
                 onClick={handleStep(index)}
                 sx={{ margin: 0 }}
                 icon={icons[index]}
-                autoFocus={label === "Frontend"}
+                autoFocus={index === 0}
               >
                 {label}
               </ZestiestStepper>
             </Step>
           ))}
         </Stepper>
-        <div style={{ display: "flex", justifyContent: "center" }}>
-          <ZestiestDivider />
-        </div>
       </div>
       <div>
         <>
@@ -64,7 +61,9 @@ const SkillsContent: React.FC = () => {
                     alt={skill.skillName}
                     height="40px"
                     width="40px"
-                    style={{ marginBottom: "4px" }}
+                    style={{
+                      marginBottom: "4px",
+                    }}
                   />
                   <Typography variant="body2" color="GrayText">
                     {skill.skillName}
@@ -126,29 +125,6 @@ const SkillsContent: React.FC = () => {
     </Box>
   );
 };
-
-const ZestiestDivider = styled(Divider)(({ theme }) => ({
-  width: "25%",
-  alignSelf: "center",
-  animation: "borderAnimation 3s infinite linear",
-  "@keyframes borderAnimation": {
-    "0%": {
-      borderColor: theme.palette.error.light,
-    },
-    "25%": {
-      borderColor: theme.palette.warning.light,
-    },
-    "50%": {
-      borderColor: theme.palette.success.light,
-    },
-    "75%": {
-      borderColor: theme.palette.info.light,
-    },
-    "100%": {
-      borderColor: theme.palette.secondary.light,
-    },
-  },
-}));
 
 const ZestiestStepper = styled(StepButton)(({ theme }) => ({
   "&:focus": {

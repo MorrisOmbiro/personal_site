@@ -5,7 +5,7 @@ import React from "react";
 const Header: React.FC = () => {
   return (
     <Title>
-      <Typography variant="h2" color="gray">
+      <Typography variant="h2" color="black">
         MORRIS OMBIRO
       </Typography>
       <Typography variant="body2" color="GrayText">

@@ -17,7 +17,6 @@ const Container = styled("div")(({ theme }) => ({
   alignItems: "center",
   height: "100vh",
   width: "70%",
-  position: "relative",
   padding: theme.spacing(2),
 }));
 

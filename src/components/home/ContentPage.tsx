@@ -28,7 +28,7 @@ const cardList = [
     className: "LogoInHeader",
     desc: (
       <DescTypography>
-        On LinkedIn, you'll find my professional journey, network , and
+        On LinkedIn, you'll find my professional journey, network, and
         achievements. Let's connect to share insights and explore new
         opportunities together.
       </DescTypography>
@@ -42,7 +42,7 @@ const cardList = [
     desc: (
       <DescTypography>
         My resume highlights my skills, experiences, and qualifications. It's a
-        snapshot of my professional background and what I bring to the table."
+        snapshot of my professional background and what I bring to the table.
       </DescTypography>
     ),
     linkUrl:
@@ -56,7 +56,7 @@ const cardList = [
       <DescTypography>
         I have experience in a variety of programming languages and frameworks,
         including React, React Native, Typescript, Javascript ES6, REST API,
-        GraphQL, and Java."
+        GraphQL, and Java.
       </DescTypography>
     ),
   },
@@ -93,41 +93,31 @@ const ContentPage: React.FC = () => {
               )}
               disableFocusRipple
             >
-              <Grid container>
+              <Grid container direction="column" xs={12} lg={12} wrap="nowrap">
                 <Grid item>
-                  <Grid
-                    container
-                    direction="column"
-                    spacing={1}
-                    alignContent="center"
-                  >
-                    <Grid item>
-                      <Logo
-                        src={param.src}
-                        // className={param.className}
-                        onClick={handleCardClick(
-                          param.linkUrl,
-                          cardStatus,
-                          setCardStatus
-                        )}
-                      />
-                    </Grid>
-                    <Grid item>
-                      <IconButton
-                        onClick={handleCardClick()}
-                        sx={{ paddingBottom: 0 }}
-                      >
-                        {param.id !== "skills" && (
-                          <OpenInNew fontSize="small" color="primary" />
-                        )}
-                      </IconButton>
-                    </Grid>
-                    <DescGrid item>
-                      <Divider style={{ height: "0px" }} />
-                    </DescGrid>
-                    <DescGrid item>{param.desc}</DescGrid>
-                  </Grid>
+                  <Logo
+                    src={param.src}
+                    onClick={handleCardClick(
+                      param.linkUrl,
+                      cardStatus,
+                      setCardStatus
+                    )}
+                  />
                 </Grid>
+                <Grid item>
+                  <IconButton
+                    onClick={handleCardClick()}
+                    sx={{ paddingBottom: 0 }}
+                  >
+                    {param.id !== "skills" && (
+                      <OpenInNew fontSize="small" color="disabled" />
+                    )}
+                  </IconButton>
+                </Grid>
+                <DescGrid>
+                  <Divider style={{ marginBottom: "8px", marginTop: "8px" }} />
+                  {param.desc}
+                </DescGrid>
               </Grid>
             </InfoButton>
           </Grid>
@@ -139,11 +129,11 @@ const ContentPage: React.FC = () => {
 };
 
 const Logo = styled("img")({
-  justifyContent: "space-between",
   width: "45px",
   height: "45px",
   alignItems: "center",
-  margin: "45px",
+  marginTop: "45px",
+  marginBottom: "45px",
   "@media (max-width: 700px)": {
     width: "60px",
     height: "60px",
@@ -165,26 +155,23 @@ const DescGrid = styled(Grid)(({ theme }) => ({
 }));
 
 const InfoButton = styled(Button)(({ theme }) => ({
-  display: "flex",
   height: "100%",
-  width: "100%",
   textTransform: "none",
   padding: theme.spacing(2, 2, 3, 2),
-  alignContent: "center",
-  borderWidth: "2px",
+  borderWidth: "1px",
+  borderColor: "gray",
   "&:hover": {
     animation: "borderAnimation 3s infinite linear",
-    borderWidth: "2px",
   },
   "&:focus": {
     backgroundColor: theme.palette.error.light,
-    borderWidth: "2px",
+    borderWidth: "1px",
     "& h6": {
       color: "white",
     },
   },
   "&:active": {
-    borderWidth: "2px",
+    borderWidth: "1px",
   },
   "@keyframes borderAnimation": {
     "0%": {
@@ -222,7 +209,6 @@ const InfoButton = styled(Button)(({ theme }) => ({
   },
   "& > *": {
     height: "100%",
-    alignItems: "flex-start",
   },
 }));
 

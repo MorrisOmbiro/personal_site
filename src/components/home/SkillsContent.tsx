@@ -5,7 +5,7 @@ import Step from "@mui/material/Step";
 import StepButton from "@mui/material/StepButton";
 import Typography from "@mui/material/Typography";
 import { skills } from "./skillLinks";
-import { Divider, styled } from "@mui/material";
+import { styled } from "@mui/material";
 import FacebookOutlinedIcon from "@mui/icons-material/FacebookOutlined";
 import CurrencyBitcoinOutlinedIcon from "@mui/icons-material/CurrencyBitcoinOutlined";
 import GitHubIcon from "@mui/icons-material/GitHub";

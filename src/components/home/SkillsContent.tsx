@@ -3,13 +3,12 @@ import Box from "@mui/material/Box";
 import Stepper from "@mui/material/Stepper";
 import Step from "@mui/material/Step";
 import StepButton from "@mui/material/StepButton";
-import Typography from "@mui/material/Typography";
 import { skills } from "./skillLinks";
-import { styled } from "@mui/material";
+import { Grid, styled } from "@mui/material";
 import FacebookOutlinedIcon from "@mui/icons-material/FacebookOutlined";
 import CurrencyBitcoinOutlinedIcon from "@mui/icons-material/CurrencyBitcoinOutlined";
 import GitHubIcon from "@mui/icons-material/GitHub";
-import Attr from "./Attr";
+import Skill from "./Skill";
 
 const steps = ["Frontend", "Backend", "Version Control"];
 const icons = [
@@ -43,85 +42,29 @@ const SkillsContent: React.FC = () => {
           ))}
         </Stepper>
       </div>
-      <div>
-        <>
-          {activeStep === 0 && (
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "flex-start",
-                flexWrap: "wrap",
-              }}
-            >
-              {skills.frontend.map((skill) => (
-                <Attr skill={skill}>
-                  <img
-                    src={skill.imgSrc}
-                    alt={skill.skillName}
-                    height="40px"
-                    width="40px"
-                    style={{
-                      marginBottom: "4px",
-                    }}
-                  />
-                  <Typography variant="body2" color="GrayText">
-                    {skill.skillName}
-                  </Typography>
-                </Attr>
-              ))}
-            </div>
-          )}
-          {activeStep === 1 && (
-            <div
-              style={{
-                display: "flex",
-                width: "100%",
-                flexWrap: "wrap",
-              }}
-            >
-              {skills.backend.map((skill) => (
-                <Attr skill={skill}>
-                  <img
-                    src={skill.imgSrc}
-                    alt={skill.skillName}
-                    height="40px"
-                    width="40px"
-                    style={{ marginBottom: "4px" }}
-                  />
-                  <Typography variant="body2" color="GrayText">
-                    {skill.skillName}
-                  </Typography>
-                </Attr>
-              ))}
-            </div>
-          )}
-          {activeStep === 2 && (
-            <div
-              style={{
-                display: "flex",
-                width: "100%",
-                flexWrap: "wrap",
-              }}
-            >
-              {skills.versionControl.map((skill) => (
-                <Attr skill={skill}>
-                  <img
-                    src={skill.imgSrc}
-                    alt={skill.skillName}
-                    height="40px"
-                    width="40px"
-                    style={{ marginBottom: "4px" }}
-                  />
-                  <Typography variant="body2" color="GrayText">
-                    {skill.skillName}
-                  </Typography>
-                </Attr>
-              ))}
-            </div>
-          )}
-        </>
-      </div>
+      <>
+        {activeStep === 0 && (
+          <Grid container xs={12} md={12} lg={12} rowSpacing={5}>
+            {skills.frontend.map((skill) => (
+              <Skill key={skill.link} skill={skill} />
+            ))}
+          </Grid>
+        )}
+        {activeStep === 1 && (
+          <Grid container xs={12} md={12} lg={12} rowSpacing={5}>
+            {skills.backend.map((skill) => (
+              <Skill key={skill.link} skill={skill} />
+            ))}
+          </Grid>
+        )}
+        {activeStep === 2 && (
+          <Grid container xs={12} md={12} lg={12} rowSpacing={5}>
+            {skills.versionControl.map((skill) => (
+              <Skill key={skill.link} skill={skill} />
+            ))}
+          </Grid>
+        )}
+      </>
     </Box>
   );
 };

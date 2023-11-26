@@ -4,7 +4,6 @@ import {
   Typography,
   Dialog,
   DialogTitle,
-  Grid,
   Divider,
 } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
@@ -35,13 +34,9 @@ const SkillsCard: React.FC<Props> = ({ open = false, setOpen }) => (
     >
       <CloseIcon />
     </IconButton>
-    <Divider style={{ height: 0, marginBottom: "16px" }} />
+    <Divider style={{ height: 0 }} />
     <CardContent style={{ height: "600px", width: "100%" }}>
-      <Grid container spacing={2}>
-        <Grid container>
-          <SkillsContent />
-        </Grid>
-      </Grid>
+      <SkillsContent />
     </CardContent>
   </Dialog>
 );

@@ -1,9 +1,7 @@
 {
   "files": {
-    "main.js": "/personal_site/static/js/main.4bdbf655.js",
-    "static/media/github.png": "/personal_site/static/media/github.d3263084234dc705b2ae.png",
+    "main.js": "/personal_site/static/js/main.a3a35eb0.js",
     "static/media/flask.svg": "/personal_site/static/media/flask.611b5611428e497086bc821da6f8511c.svg",
-    "static/media/linkedin.png": "/personal_site/static/media/linkedin.032cf8a63be2f0f4d425.png",
     "static/media/mongodb.svg": "/personal_site/static/media/mongodb.d89a6eebb2b81e487ffc99f69a3f6ea4.svg",
     "static/media/nodejs.svg": "/personal_site/static/media/nodejs.52cbf9a89f44655c0375b9e9f88bf9c5.svg",
     "static/media/express.svg": "/personal_site/static/media/express.75fff9be2f3b289ba7be1f43a08f7a4c.svg",
@@ -34,9 +32,9 @@
     "static/media/django.svg": "/personal_site/static/media/django.0779fca292c0a723b464bcb7534f802c.svg",
     "static/media/material-ui-1.svg": "/personal_site/static/media/material-ui-1.fd510ed8518b192069590b04e2e6348a.svg",
     "static/media/nextjs.svg": "/personal_site/static/media/nextjs.a0b023a752b7152d80c57179ebee6294.svg",
-    "main.4bdbf655.js.map": "/personal_site/static/js/main.4bdbf655.js.map"
+    "main.a3a35eb0.js.map": "/personal_site/static/js/main.a3a35eb0.js.map"
   },
   "entrypoints": [
-    "static/js/main.4bdbf655.js"
+    "static/js/main.a3a35eb0.js"
   ]
 }

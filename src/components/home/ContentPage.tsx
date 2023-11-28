@@ -1,48 +1,50 @@
 import React from "react";
-import { Button, Divider, Grid, IconButton, styled } from "@mui/material";
-import githubLogo from "../images/github.png";
-import linkedInLogo from "../images/linkedin.png";
-import resumeLogo from "../images/business-doc.png";
-import skillsLogo from "../images/skills.png";
+import { Button, Divider, Grid, styled } from "@mui/material";
 import DescTypography from "./DescTypography";
 import SkillsCard from "./SkillsCard";
 import { OpenInNew } from "@mui/icons-material";
+import LinkedinLogo from "./icons/LinkedinLogo";
+import GithubLogo from "./icons/GithubLogo";
+import SkillsLogo from "./icons/SkillsLogo";
+import ResumeLogo from "./icons/ResumeLogo";
 
 const cardList = [
   {
     id: "github",
-    src: githubLogo,
+    logo: <GithubLogo />,
     className: "LogoInHeader",
     desc: (
       <DescTypography>
-        GitHub is my coding playground, where you can explore my projects and
-        contributions. Check out my repositories to see my open-source work and
-        coding adventures.
+        <span style={{ fontWeight: 700, color: "#000000" }}>GitHub</span> is my
+        coding playground, where you can explore my projects and contributions.
+        Check out my repositories to see my open-source work and coding
+        adventures.
       </DescTypography>
     ),
     linkUrl: "https://github.com/MorrisOmbiro",
   },
   {
     id: "linkedin",
-    src: linkedInLogo,
+    logo: <LinkedinLogo />,
     className: "LogoInHeader",
     desc: (
       <DescTypography>
-        On LinkedIn, you'll find my professional journey, network, and
-        achievements. Let's connect to share insights and explore new
-        opportunities together.
+        On <span style={{ fontWeight: 700, color: "#0076B2" }}>LinkedIn</span>,
+        you'll find my professional journey, network, and achievements. Let's
+        connect to share insights and explore new opportunities together.
       </DescTypography>
     ),
     linkUrl: "https://www.linkedin.com/in/morris-ombiro-a72973100/",
   },
   {
     id: "resume",
-    src: resumeLogo,
+    logo: <ResumeLogo />,
     className: "LogoInHeader",
     desc: (
       <DescTypography>
-        My resume highlights my skills, experiences, and qualifications. It's a
-        snapshot of my professional background and what I bring to the table.
+        <span style={{ fontWeight: 700, color: "#FAA347" }}>My resume</span>{" "}
+        highlights my skills, experiences, and qualifications. It's a snapshot
+        of my professional background and what I bring to the table.
       </DescTypography>
     ),
     linkUrl:
@@ -50,13 +52,14 @@ const cardList = [
   },
   {
     id: "skills",
-    src: skillsLogo,
+    logo: <SkillsLogo />,
     className: "LogoInHeader",
     desc: (
       <DescTypography>
-        I have experience in a variety of programming languages and frameworks,
-        including React, React Native, Typescript, Javascript ES6, REST API,
-        GraphQL, and Java.
+        I have{" "}
+        <span style={{ fontWeight: 700, color: "#FAA347" }}>experience</span> in
+        various programming languages and frameworks, including React, React
+        Native, Typescript, Javascript ES6, REST API, GraphQL, and Java.
       </DescTypography>
     ),
   },
@@ -95,25 +98,13 @@ const ContentPage: React.FC = () => {
             >
               <Grid container direction="column" xs={12} lg={12} wrap="nowrap">
                 <Grid item>
-                  <Logo
-                    src={param.src}
-                    onClick={handleCardClick(
-                      param.linkUrl,
-                      cardStatus,
-                      setCardStatus
-                    )}
-                  />
+                  <SvgLogo>{param.logo}</SvgLogo>
                 </Grid>
-                <Grid item>
-                  <IconButton
-                    onClick={handleCardClick()}
-                    sx={{ paddingBottom: 0 }}
-                  >
-                    {param.id !== "skills" && (
-                      <OpenInNew fontSize="small" color="disabled" />
-                    )}
-                  </IconButton>
-                </Grid>
+                <DescGrid item style={{ height: "18.75px" }}>
+                  {param.id !== "skills" && (
+                    <OpenInNew fontSize="small" color="disabled" />
+                  )}
+                </DescGrid>
                 <DescGrid>
                   <Divider style={{ marginBottom: "8px", marginTop: "8px" }} />
                   {param.desc}
@@ -128,18 +119,23 @@ const ContentPage: React.FC = () => {
   );
 };
 
-const Logo = styled("img")({
+const iconStyling = {
   width: "45px",
   height: "45px",
-  alignItems: "center",
   marginTop: "45px",
   marginBottom: "45px",
+  display: "block",
+  marginLeft: "auto",
+  marginRight: "auto",
   "@media (max-width: 700px)": {
     width: "60px",
     height: "60px",
     alignItems: "center",
   },
-});
+};
+
+const SvgLogo = styled("div")(iconStyling);
+
 const SocialMedia = styled("div")(({ theme }) => ({
   position: "relative",
   top: "12%",
@@ -159,12 +155,12 @@ const InfoButton = styled(Button)(({ theme }) => ({
   textTransform: "none",
   padding: theme.spacing(2, 2, 3, 2),
   borderWidth: "1px",
-  borderColor: "gray",
+  borderColor: "#D3D3D3",
   "&:hover": {
     animation: "borderAnimation 3s infinite linear",
   },
   "&:focus": {
-    backgroundColor: theme.palette.error.light,
+    backgroundColor: theme.palette.grey[800],
     borderWidth: "1px",
     "& h6": {
       color: "white",

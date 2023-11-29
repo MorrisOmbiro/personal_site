@@ -2,7 +2,7 @@ import React from "react";
 import { Button, Divider, Grid, styled } from "@mui/material";
 import DescTypography from "./components/SkillsCard/components/DescTypography";
 import SkillsCard from "./components/SkillsCard";
-import { OpenInNew } from "@mui/icons-material";
+import { Link } from "@mui/icons-material";
 import { LinkedinLogo, GithubLogo, SkillsLogo, ResumeLogo } from "./logoIcons";
 
 const cardList = [
@@ -93,13 +93,13 @@ const ContentPage: React.FC = () => {
               )}
               disableFocusRipple
             >
-              <Grid container direction="column" xs={12} lg={12} wrap="nowrap">
+              <Grid container direction="column" wrap="nowrap">
                 <Grid item>
                   <SvgLogo>{param.logo}</SvgLogo>
                 </Grid>
                 <DescGrid item style={{ height: "18.75px" }}>
                   {param.id !== "skills" && (
-                    <OpenInNew fontSize="small" color="disabled" />
+                    <Link fontSize="small" color="disabled" />
                   )}
                 </DescGrid>
                 <DescGrid>

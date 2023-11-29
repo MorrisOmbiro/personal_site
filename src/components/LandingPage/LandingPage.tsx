@@ -1,7 +1,7 @@
 import React from "react";
-import ContentPage from "./ContentPage";
-import Footer from "./Footer";
-import Header from "./Header";
+import ContentPage from "./components/ContentPage";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
 import { styled } from "@mui/material/styles";
 
 const LandingPage: React.FC = () => (

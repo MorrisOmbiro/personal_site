@@ -8,7 +8,7 @@ import {
 } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
 import IconButton from "@mui/material/IconButton";
-import SkillsContent from "./SkillsContent";
+import SkillsContent from "./components/SkillsContent";
 
 interface Props {
   open: boolean;

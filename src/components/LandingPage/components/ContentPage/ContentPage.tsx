@@ -1,12 +1,9 @@
 import React from "react";
 import { Button, Divider, Grid, styled } from "@mui/material";
-import DescTypography from "./DescTypography";
-import SkillsCard from "./SkillsCard";
+import DescTypography from "./components/SkillsCard/components/DescTypography";
+import SkillsCard from "./components/SkillsCard";
 import { OpenInNew } from "@mui/icons-material";
-import LinkedinLogo from "./icons/LinkedinLogo";
-import GithubLogo from "./icons/GithubLogo";
-import SkillsLogo from "./icons/SkillsLogo";
-import ResumeLogo from "./icons/ResumeLogo";
+import { LinkedinLogo, GithubLogo, SkillsLogo, ResumeLogo } from "./logoIcons";
 
 const cardList = [
   {

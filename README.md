@@ -1,1 +1,1 @@
-# [morrisombiro.com](https://morrisombiro.com){:target="_blank"}
+# [morrisombiro.com](https://morrisombiro.com)
